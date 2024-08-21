@@ -1,9 +1,13 @@
 ---
+import { Home } from "../assets";
 import Listitem from "./Listitem.astro";
 ---
 
 <header class="py-16 flex gap-12">
   <h1 class="text-bold text-4xl max-w-[150px] mr-8">Fabrizio Siqueira</h1>
+  <ul>
+    <Listitem href="/" class="min-w-[90px]"><Home /> Home</Listitem>
+  </ul>
   <ul>
     <Listitem href="/bio">Bio</Listitem>
     <Listitem href="/experience">Experience</Listitem>

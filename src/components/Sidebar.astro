@@ -1,19 +1,29 @@
 ---
 import { Github, Linkedin, Email } from "../assets";
 const CONTACTS = [
-  { url: "https://github.com/fsiqueirag", Icon: Github },
+  { url: "https://github.com/fsiqueirag", Icon: Github, ariaLabel: "Github" },
   {
     url: "https://www.linkedin.com/in/fabrizio-siqueira-giampietro-876661186/",
     Icon: Linkedin,
+    ariaLabel: "Linkedin",
   },
-  { url: "mailto:fabrizio.siqueira@hotmail.com", Icon: Email },
+  {
+    url: "mailto:fabrizio.siqueira@hotmail.com",
+    Icon: Email,
+    ariaLabel: "Email",
+  },
 ];
 ---
 
 <aside class="flex flex-col px-8 gap-6 mt-[212px] pt-32">
   {
-    CONTACTS.map(({ url, Icon }) => (
-      <a href={url} target="_blank" rel="noopener noreferrer">
+    CONTACTS.map(({ url, Icon, ariaLabel }) => (
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={ariaLabel}
+      >
         <Icon class="text-neutral-400 hover:text-neutral-800 transition-colors duration-200" />
       </a>
     ))
