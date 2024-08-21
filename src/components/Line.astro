@@ -1,0 +1,19 @@
+---
+interface Props {
+  direction: "horizontal" | "vertical";
+  class?: string;
+}
+const { direction, class: className } = Astro.props;
+---
+
+<div
+  class:list={[
+    "bg-neutral-300 absolute",
+    {
+      "h-px": direction === "horizontal",
+      "w-px": direction === "vertical",
+    },
+    className,
+  ]}
+>
+</div>
