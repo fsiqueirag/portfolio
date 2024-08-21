@@ -10,6 +10,15 @@ export default {
         oswald: ["Oswald", "sans-serif"],
         titillium: ["Titillium", "sans-serif"],
       },
+      animation: {
+        "height-grow": "heightGrow 3s linear forwards",
+      },
+      keyframes: {
+        heightGrow: {
+          "0%": { height: 0 },
+          "100%": { height: "100vh" },
+        },
+      },
     },
   },
   plugins: [],
