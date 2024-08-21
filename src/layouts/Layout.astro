@@ -1,6 +1,6 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-import { Header } from "../components";
+import { Header, Sidebar } from "../components";
 
 interface Props {
   title: string;
@@ -38,28 +38,15 @@ const { title } = Astro.props;
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body class="bg-white min-h-lvh px-16 flex flex-col 100vh">
-    <Header />
-    <slot />
+  <body class="bg-white min-h-lvh flex 100vh">
+    <Sidebar />
+    <div class="px-16 flex flex-col 100vh">
+      <Header />
+      <slot />
+    </div>
   </body>
 </html>
 <style is:global>
-  @font-face {
-    font-family: "Mostin";
-    src: url("/fonts/MostinBlack.otf") format("otf");
-    font-weight: black;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: "Mostin";
-    src: url("/fonts/MostinMedium.otf") format("otf");
-    font-weight: medium;
-    font-style: normal;
-    font-display: swap;
-  }
-
   :root {
     --accent: 136, 58, 234;
     --accent-light: 224, 204, 250;
