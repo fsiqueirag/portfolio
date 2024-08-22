@@ -4,7 +4,11 @@ import Listitem from "./Listitem.astro";
 ---
 
 <header class="py-16 flex gap-12">
-  <h1 class="text-bold text-4xl max-w-[150px] mr-8">Fabrizio Siqueira</h1>
+  <h1 class="text-bold text-4xl max-w-[150px] mr-8 font-titillium font-light">
+    Fabrizio <span class="font-bold bg-neutral-800 text-white px-2 ml-4"
+      >Siqueira</span
+    >
+  </h1>
   <ul>
     <Listitem href="/" class="min-w-[90px]"><Home /> Home</Listitem>
   </ul>
@@ -17,6 +21,6 @@ import Listitem from "./Listitem.astro";
 
 <style>
   h1 {
-    font-family: Edu VIC WA NT Beginner;
+    /* font-family: Edu VIC WA NT Beginner; */
   }
 </style>

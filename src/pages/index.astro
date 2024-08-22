@@ -1,33 +1,43 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Container, Button, Line } from "../components";
+import Typewriter from "../components/Typewriter";
 ---
 
 <Layout title="Fabrizio Siqueira">
-  <main class="flex-1">
+  <main class="flex-1 flex items-center justify-start">
     <Line
       direction="vertical"
-      class="top-0 right-[20%] animate-[heightGrow_1200ms_ease-out_900ms_forwards]"
+      class="top-0 right-[20%] animate-[heightGrow_800ms_ease-out_900ms_forwards]"
     />
     <Line
       direction="vertical"
-      class="top-0 right-1/2 animate-[heightGrow_2400ms_ease-out_500ms_forwards]"
+      class="top-0 right-1/2 animate-[heightGrow_3500ms_ease-out_500ms_forwards]"
     />
-    <Container class="mt-32">
+    <Container class="mx-0">
       <h1
         class="text-6xl font-oswald flex flex-col uppercase gap-2 text-neutral-800"
+        aria-label="Software Engineer"
       >
-        <span class="font-semibold">Software</span>
-        <span>Engineer</span>
+        <span class="font-semibold min-h-[60px]">
+          <Typewriter text="Software" delay={40} client:load />
+        </span>
+        <span class="min-h-[60px] font-light">
+          <Typewriter text="Engineer" delay={80} client:load />
+        </span>
       </h1>
       <p
-        class="text-2xl font-titillium font-light gap-2 text-neutral-800 mt-8 max-w-sm"
+        class="text-2xl font-titillium font-light gap-2 text-neutral-800 mt-8 max-w-sm animate-[fadeLeft_1200ms_ease-out_800ms_both]"
       >
         <span class="bg-neutral-800 text-white font-medium px-1"
           >Web and Native developer</span
         > building high-end, scalable and performant solutions.
       </p>
-      <Button href="/bio" class="mt-4" variant="primary">View Bio</Button>
+      <Button
+        class="mt-4 animate-[fadeIn_600ms_ease-out_1400ms_both]"
+        href="/bio"
+        variant="primary">View Bio</Button
+      >
     </Container>
-  </main></Layout
->
+  </main>
+</Layout>
