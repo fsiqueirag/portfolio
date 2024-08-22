@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import { Header, Sidebar } from "../components";
+import "../styles/main.css";
 
 interface Props {
   title: string;
@@ -16,6 +17,48 @@ const { title } = Astro.props;
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="preload"
+      href="/fonts/Oswald-ExtraLight.ttf"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/Oswald-Light.ttf"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/Oswald-Bold.ttf"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/Oswald-Medium.ttf"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/Oswald-Regular.ttf"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/Oswald-SemiBold.ttf"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,49 +78,6 @@ const { title } = Astro.props;
   </body>
 </html>
 <style is:global>
-  @font-face {
-    font-family: "Oswald";
-    src: url("/fonts/Oswald-ExtraLight.ttf");
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Oswald";
-    src: url("/fonts/Oswald-Light.ttf");
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Oswald";
-    src: url("/fonts/Oswald-Regular.ttf");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Oswald";
-    src: url("/fonts/Oswald-Medium.ttf");
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Oswald";
-    src: url("/fonts/Oswald-SemiBold.ttf");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Oswald";
-    src: url("/fonts/Oswald-Bold.ttf");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-  }
-
   :root {
     --accent: 136, 58, 234;
     --accent-light: 224, 204, 250;
