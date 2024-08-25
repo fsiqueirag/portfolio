@@ -4,22 +4,29 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#fe4242",
+        primary: "#EC9192",
       },
       fontFamily: {
         oswald: ["Oswald", "sans-serif"],
         titillium: ["Titillium", "sans-serif"],
       },
       animation: {
-        "height-grow": "heightGrow 3s linear forwards",
+        "height-grow": "heightGrow 3s ease-in-out forwards",
+        "width-grow": "widthGrow 3s ease-in-out both",
         "fade-in": "fadeIn 1s ease-in-out both",
         "fade-right": "fadeRight 1s ease-in-out both",
         "fade-left": "fadeLeft 1s ease-in-out both",
+        "rotate-cube": "rotateCube 1.5s ease-in-out both",
+        "circle-grow": "circleGrow 1s ease-in-out both",
       },
       keyframes: {
         heightGrow: {
           "0%": { height: 0 },
-          "100%": { height: "100vh" },
+          "100%": { height: "100%" },
+        },
+        widthGrow: {
+          "0%": { width: 0 },
+          "100%": { width: "100%" },
         },
         fadeIn: {
           "0%": { opacity: 0 },
@@ -32,6 +39,16 @@ export default {
         fadeRight: {
           "0%": { opacity: 0, transform: "translateX(-40px)" },
           "100%": { opacity: 1, transform: "translateX(0)" },
+        },
+        rotateCube: {
+          "0%": { opacity: 0, transform: "rotateZ(-45deg)" },
+          "70%": { opacity: 1, transform: "rotateZ(50deg)" },
+          "85%": { opacity: 1, transform: "rotateZ(42deg)" },
+          "100%": { opacity: 1, transform: "rotateZ(45deg)" },
+        },
+        circleGrow: {
+          "0%": { transform: "scale(0)" },
+          "100%": { transform: "scale(1)" },
         },
       },
     },

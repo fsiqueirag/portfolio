@@ -4,3 +4,4 @@ export { default as Container } from "./Container.astro";
 export { default as Button } from "./Button.astro";
 export { default as Line } from "./Line.astro";
 export { default as Sidebar } from "./Sidebar.astro";
+export { default as Cube } from "./Cube.astro";
