@@ -17,7 +17,9 @@ export default {
         "fade-right": "fadeRight 1s ease-in-out both",
         "fade-left": "fadeLeft 1s ease-in-out both",
         "rotate-cube": "rotateCube 1.5s ease-in-out both",
-        "circle-grow": "circleGrow 1s ease-in-out both",
+        "circle-grow": "circleGrow 1s ease-out both",
+        pop: "pop 1000ms ease-in-out both",
+        "move-right": "moveRight 2s 800ms ease-in-out both",
       },
       keyframes: {
         heightGrow: {
@@ -49,6 +51,16 @@ export default {
         circleGrow: {
           "0%": { transform: "scale(0)" },
           "100%": { transform: "scale(1)" },
+        },
+        pop: {
+          "0%": { transform: "scale(0)" },
+          "40%": { transform: "scale(1.1)" },
+          "70%": { transform: "scale(0.95)" },
+          "100%": { transform: "scale(1)" },
+        },
+        moveRight: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(100%)" },
         },
       },
     },

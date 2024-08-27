@@ -1,0 +1,30 @@
+---
+interface Props {
+  variant: "filled" | "outlined";
+  title: string;
+  subtitle: string;
+  date: string;
+  index: number;
+  class?: string;
+}
+
+const { variant, title, date, subtitle, index, class: className } = Astro.props;
+---
+
+<div
+  class:list={[
+    "border border-neutral-800 rounded-lg shadow-lg py-6 px-8 md:hover:-translate-y-2 ease-in-out duration-500 transition-transform",
+    {
+      "md:bg-white md:text-neutral-800": variant === "outlined",
+      "md:bg-neutral-800 md:text-white": variant === "filled",
+      "bg-neutral-800 text-white": index % 2 === 0,
+      "bg-white text-neutral-800": index % 2 !== 0,
+    },
+    className,
+  ]}
+>
+  <h2 class="text-4xl font-bold font-oswald">{title}</h2>
+  <span class="text-xs font-light uppercase my-2 block">{date}</span>
+  <h3 class="text-2xl font-bold font-oswald mb-4">{subtitle}</h3>
+  <slot />
+</div>

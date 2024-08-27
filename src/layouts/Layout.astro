@@ -5,9 +5,10 @@ import "../styles/main.css";
 
 interface Props {
   title: string;
+  class?: string;
 }
 
-const { title } = Astro.props;
+const { title, class: className } = Astro.props;
 ---
 
 <!doctype html>
@@ -71,7 +72,7 @@ const { title } = Astro.props;
   </head>
   <body class="bg-white min-h-lvh flex 100vh w-full">
     <Sidebar />
-    <div class="px-16 flex flex-col 100vh flex-1">
+    <div class:list={["px-6 lg:px-16 flex flex-col 100vh flex-1", className]}>
       <Header />
       <slot />
     </div>
