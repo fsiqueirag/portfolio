@@ -1,15 +1,19 @@
 ---
 import { Line } from "../../components";
-import { Container, Cube } from "../../components";
+import { Container, Cube, Typewriter } from "../../components";
 import Layout from "../../layouts/Layout.astro";
 ---
 
 <Layout title="Bio | Fabrizio Siqueira">
   <Container class="pb-24">
     <p
-      class="text-5xl font-oswald uppercase text-neutral-800 leading-tight mb-4"
+      class="text-5xl font-oswald uppercase text-neutral-800 leading-tight mb-4 min-h-[120px]"
     >
-      Hello! I’m Fabrizio, a software engineer from Buenos Aires, Argentina.
+      <Typewriter
+        text="Hello! I’m Fabrizio, a software engineer from Buenos Aires, Argentina."
+        delay={50}
+        client:load
+      />
     </p>
     <div class="relative">
       <Cube class="left-2 relative" />
@@ -20,7 +24,7 @@ import Layout from "../../layouts/Layout.astro";
     </div>
 
     <article
-      class="flex gap-8 mt-16 text-lg tracking-wide text-neutral-700 font-light relative"
+      class="flex flex-col md:flex-row gap-8 mt-16 text-lg tracking-wide text-neutral-700 font-light relative"
     >
       <Line
         class="animate-[heightGrow_2500ms_ease-in-out_1300ms_forwards] -top-[34px] -right-[55px] bg-neutral-800 h-[2px]"

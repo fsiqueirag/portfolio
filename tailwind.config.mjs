@@ -1,10 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  darkMode: "selector",
   theme: {
     extend: {
       colors: {
-        primary: "#EC9192",
+        primary: "#CE6A85",
       },
       fontFamily: {
         oswald: ["Oswald", "sans-serif"],

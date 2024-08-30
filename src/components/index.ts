@@ -6,3 +6,4 @@ export { default as Line } from "./Line.astro";
 export { default as Sidebar } from "./Sidebar.astro";
 export { default as Cube } from "./Cube.astro";
 export { default as Card } from "./Card.astro";
+export { default as Typewriter } from "./Typewriter";
