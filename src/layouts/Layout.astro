@@ -74,7 +74,7 @@ const { title, class: className } = Astro.props;
     class="bg-neutral-100 min-h-lvh flex flex-col-reverse md:flex-row 100vh w-full"
   >
     <Sidebar />
-    <div class:list={["px-6 lg:px-16 flex flex-col 100vh flex-1", className]}>
+    <div class:list={["px-6 lg:px-16 flex flex-col 100vh flex-1 overflow-x-hidden text-center md:text-left", className]}>
       <Header />
       <slot />
     </div>

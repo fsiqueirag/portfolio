@@ -1,0 +1,87 @@
+---
+import { Line } from "../../../components";
+import { Container, Cube, Typewriter } from "../../../components";
+import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout title="Bio | Fabrizio Siqueira">
+  <Container class="pb-24">
+    <p
+      class="text-5xl font-oswald uppercase text-neutral-800 leading-tight mb-4 min-h-[120px]"
+    >
+      <Typewriter
+        text="¡Hola! Soy Fabrizio, un ingeniero de software de Buenos Aires, Argentina."
+        delay={50}
+        client:load
+      />
+    </p>
+    <div class="relative">
+      <Cube class="left-2 relative" />
+      <Line
+        class="animate-[widthGrow_2500ms_ease-in-out_1300ms_forwards] top-[19px] left-[55px] right-0 bg-neutral-800 h-[2px] w-0"
+        direction="horizontal"
+      />
+    </div>
+
+    <article
+      class="flex flex-col md:flex-row gap-8 mt-16 text-lg tracking-wide text-neutral-700 font-light relative"
+    >
+      <Line
+        class="animate-[heightGrow_2500ms_ease-in-out_1300ms_forwards] -top-[34px] -right-[55px] bg-neutral-800 h-[2px]"
+        direction="vertical"
+      />
+      <div
+        class="rounded-full w-12 h-12 bg-primary -right-[77px] animate-[circleGrow_1000ms_ease-in-out_2300ms_forwards] -bottom-12 absolute scale-0"
+      >
+      </div>
+      <div class="flex-1">
+        <p class="font-titillium animate-[fadeIn_500ms_ease-in-out_0ms_both]">
+          <span class="font-bold">Con cuatro años de experiencia</span> en el sector
+          tech, he tenido la oportunidad de colaborar en varios proyectos, tanto
+          como freelancer como en empresas, utilizando una amplia gama de tecnologías.
+          Mi pasión por la programación se originó en mi infancia, cuando soñaba
+          con desarrollar videojuegos. Sin embargo, no fue hasta 2020 que di el salto
+          al mundo del desarrollo de software. Mi formación académica en Artes Electrónicas,
+          una disciplina artística estrechamente vinculada a la tecnología, me proporcionó
+          una sólida base en programación, y fue el catalizador que me impulsó a
+          profundizar por mi cuenta en el desarrollo web.
+        </p>
+        <p
+          class="font-titillium mt-4 animate-[fadeIn_500ms_ease-in-out_300ms_both]"
+        >
+          Comencé aprendiendo <span
+            class="bg-neutral-800 text-white px-2 py-0.5"
+            >HTML, CSS y JavaScript</span
+          >, aplicándolos en proyectos personales y trabajos de terceros. Pronto
+          transicioné a un entorno más formal, trabajando durante seis meses
+          para una empresa de marketing donde tuve la oportunidad de utilizar
+          tecnologías como <span class="bg-neutral-800 px-2 py-0.5 text-white"
+            >WordPress y PHP</span
+          >, mientras continuaba aprendiendo <span
+            class="bg-neutral-800 text-white px-2 py-0.5">React y Node</span
+          > en mi tiempo libre.
+        </p>
+      </div>
+
+      <p
+        class="font-titillium flex-1 animate-[fadeIn_500ms_ease-in-out_600ms_both]"
+      >
+        Mi objetivo era trabajar con estas últimas tecnologías, lo que me llevó
+        a buscar una nueva dirección y entrar en una empresa dedicada al
+        desarrollo de software. En este nuevo papel, pude avanzar
+        significativamente en mi carrera, participando en una variedad de
+        proyectos incluyendo un juego de trivia deportiva, una plataforma de
+        métricas, múltiples blogs y landing pages, así como proyectos internos
+        utilizando IA. Estos proyectos me permitieron trabajar con una variedad
+        de tecnologías, incluyendo <span
+          class="bg-neutral-800 text-white px-2 py-0.5"
+          >React, MongoDB, Node, Next.js, Nest, Astro</span
+        >, entre otros. Además, tuve la oportunidad de <span
+          class="bg-neutral-800 text-white px-2 py-0.5"
+          >colaborar con equipos</span
+        > de varios tamaños, desde pequeños grupos de dos o tres personas hasta equipos
+        más grandes, de más de quince miembros.
+      </p>
+    </article>
+  </Container>
+</Layout>

@@ -1,6 +1,6 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { Container, Button, Line, Typewriter } from "../components";
+import Layout from "../../layouts/Layout.astro";
+import { Container, Button, Line, Typewriter } from "../../components";
 ---
 
 <Layout title="Fabrizio Siqueira">
@@ -19,24 +19,23 @@ import { Container, Button, Line, Typewriter } from "../components";
         aria-label="Software Engineer"
       >
         <span class="font-semibold min-h-[60px]">
-          <Typewriter text="Software" delay={40} client:load />
+          <Typewriter text="Ingeniero" delay={40} client:load />
         </span>
         <span class="min-h-[60px] font-light">
-          <Typewriter text="Engineer" delay={80} client:load />
+          <Typewriter text="de Software" delay={80} client:load />
         </span>
       </h1>
       <p
-        class="mx-auto md:mx-0 text-2xl font-titillium font-light gap-2 text-neutral-800 
-        mt-8 max-w-sm animate-[fadeLeft_1200ms_ease-out_800ms_both]"
+        class="mx-auto md:mx-0 text-2xl font-titillium font-light gap-2 text-neutral-800 mt-8 max-w-sm animate-[fadeLeft_1200ms_ease-out_800ms_both]"
       >
         <span class="bg-neutral-800 text-white font-medium px-1"
-          >Web and Mobile developer</span
-        > building high-end, scalable and performant solutions.
+          >Desarrollador Web y Mobile</span
+        > Construyendo soluciones de alta gama, escalables y de alto rendimiento.
       </p>
       <Button
         class="mt-4 animate-[fadeIn_600ms_ease-out_1400ms_both]"
-        href="/bio"
-        variant="primary">View Bio</Button
+        href="/es/bio"
+        variant="primary">Ver Bio</Button
       >
     </Container>
   </main>

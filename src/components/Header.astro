@@ -1,25 +1,68 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
 import Listitem from "./Listitem.astro";
+
+const { pathname } = Astro.url;
+
+const isSpanishSelected = pathname.includes("es");
 ---
 
 <header
-  class="py-6 md:py-16 overflow-hidden md:overflow-auto flex gap-6 md:gap-12
+  class="py-6 md:py-16 overflow-hidden md:overflow-auto flex justify-between items-center
   2xl:max-w-screen-lg 2xl:mx-auto w-full z-10"
 >
-  <h1
-    class="text-bold text-2xl md:text-4xl max-w-[150px] mr-8 font-titillium font-light"
-  >
-    Fabrizio
-    <span class="font-bold bg-neutral-800 text-white px-2 ml-4">Siqueira</span>
-  </h1>
+  <div class="flex gap-6 md:gap-12">
+    <h1
+      class="text-bold text-2xl md:text-4xl max-w-[150px] mr-8 font-titillium font-light"
+    >
+      Fabrizio
+      <span class="font-bold bg-neutral-800 text-white px-2 ml-4">Siqueira</span
+      >
+    </h1>
 
-  <div>
-    <ul>
-      <Listitem href="/">Home</Listitem>
-    </ul>
-    <ul>
-      <Listitem href="/bio">Bio</Listitem>
-      <Listitem href="/experience">Experience</Listitem>
-    </ul>
+    {
+      isSpanishSelected ? (
+        <div>
+          <ul>
+            <Listitem href={"/es/"}>Home</Listitem>
+          </ul>
+          <ul>
+            <Listitem href={"/es/bio"}>Bio</Listitem>
+            <Listitem href={"/es/experience"}>Experiencia</Listitem>
+          </ul>
+        </div>
+      ) : (
+        <div>
+          <ul>
+            <Listitem href={"/"}>Home</Listitem>
+          </ul>
+          <ul>
+            <Listitem href={"/bio"}>Bio</Listitem>
+            <Listitem href={"/experience"}>Experience</Listitem>
+          </ul>
+        </div>
+      )
+    }
+  </div>
+
+  <div class="flex border border-neutral-200">
+    <a
+      href={getRelativeLocaleUrl("es")}
+      class:list={[
+        "border-r border-r-neutral-200 text-neutral-800 px-2 py-1 cursor-pointer hover:opacity-80",
+        {
+          "bg-neutral-800 text-white": isSpanishSelected,
+        },
+      ]}>ES</a
+    >
+    <a
+      href={getRelativeLocaleUrl("en")}
+      class:list={[
+        "px-2 py-1  text-neutral-800 cursor-pointer hover:opacity-80",
+        {
+          "bg-neutral-800 text-white": !isSpanishSelected,
+        },
+      ]}>EN</a
+    >
   </div>
 </header>
