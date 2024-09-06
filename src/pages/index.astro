@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Container, Button, Line, Typewriter } from "../components";
+import Avatar from "../assets/avatar.png";
 ---
 
 <Layout title="Fabrizio Siqueira">
@@ -13,31 +14,42 @@ import { Container, Button, Line, Typewriter } from "../components";
       direction="vertical"
       class="top-0 right-1/2 animate-[heightGrow_3500ms_ease-out_500ms_forwards]"
     />
-    <Container class="mx-0">
-      <h1
-        class="text-6xl font-oswald flex flex-col uppercase gap-2 text-neutral-800"
-        aria-label="Software Engineer"
-      >
-        <span class="font-semibold min-h-[60px]">
-          <Typewriter text="Software" delay={40} client:load />
-        </span>
-        <span class="min-h-[60px] font-light">
-          <Typewriter text="Engineer" delay={80} client:load />
-        </span>
-      </h1>
-      <p
-        class="mx-auto md:mx-0 text-2xl font-titillium font-light gap-2 text-neutral-800 
-        mt-8 max-w-sm animate-[fadeLeft_1200ms_ease-out_800ms_both]"
-      >
-        <span class="bg-neutral-800 text-white font-medium px-1"
-          >Web and Mobile developer</span
-        > building high-end, scalable and performant solutions.
-      </p>
-      <Button
-        class="mt-4 animate-[fadeIn_600ms_ease-out_1400ms_both]"
-        href="/bio"
-        variant="primary">View Bio</Button
-      >
+    <Container
+      class="mx-auto flex flex-col-reverse md:flex-row max-w-none justify-center md:justify-between items-center"
+    >
+      <div class="flex flex-col justify-center items-center md:items-start">
+        <h1
+          class="text-4xl md:text-6xl font-oswald flex flex-col uppercase gap-0 md:gap-2 text-neutral-800"
+          aria-label="Software Engineer"
+        >
+          <span class="font-semibold min-h-[40px] md:min-h-[60px]">
+            <Typewriter text="Software" delay={40} client:load />
+          </span>
+          <span class="min-h-[40px] md:min-h-[60px] font-light">
+            <Typewriter text="Engineer" delay={80} client:load />
+          </span>
+        </h1>
+        <p
+          class="mx-auto md:mx-0 font-titillium font-light gap-2 text-neutral-800
+        mt-8 max-w-sm animate-[fadeLeft_1200ms_ease-out_800ms_both] text-md md:text-2xl"
+        >
+          <span class="bg-neutral-800 text-white font-medium px-1"
+            >Web and Mobile developer</span
+          > building high-end, scalable and performant solutions.
+        </p>
+        <Button
+          class="mt-4 animate-[fadeIn_600ms_ease-out_1400ms_both]"
+          href="/bio"
+          variant="primary">View Bio</Button
+        >
+      </div>
+      <div>
+        <img
+          class="animate-[fadeLeft_800ms_ease-in-out_1000ms_both] mb-8 md:mb-0 mx-auto md:mr-[100px] xl:mr-[250px] w-[170px] md:w-[220px] lg:w-[350px] xl:w-[380px]"
+          src={Avatar.src}
+          alt="some test image"
+        />
+      </div>
     </Container>
   </main>
 </Layout>

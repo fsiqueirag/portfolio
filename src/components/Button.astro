@@ -14,7 +14,7 @@ const { type = "button", variant, href, class: className } = Astro.props;
     <button
       type={type}
       class:list={[
-        "px-10 py-3 rounded-sm uppercase font-bold text-xl tracking-wide inline-block",
+        "px-10 py-3 rounded-sm uppercase font-bold text-md md:text-xl tracking-wide inline-block",
         variant === "primary"
           ? "bg-neutral-800 text-white hover:bg-transparent hover:text-neutral-800 border-2 border-neutral-800"
           : "bg-gray-500 text-black",
@@ -27,7 +27,7 @@ const { type = "button", variant, href, class: className } = Astro.props;
     <a
       href={href}
       class:list={[
-        "px-10 py-3 rounded-sm uppercase font-bold text-xl tracking-wide inline-block transition-colors ease-in-out duration-200",
+        "px-5 md:px-10 py-2 md:py-3 rounded-sm uppercase font-bold text-md md:text-xl tracking-wide inline-block transition-colors ease-in-out duration-200",
         variant === "primary"
           ? "bg-neutral-800 text-white hover:bg-transparent hover:text-neutral-800 border-2 border-neutral-800"
           : "bg-gray-500 text-black",
