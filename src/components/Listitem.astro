@@ -6,8 +6,6 @@ interface Props {
 const { href, class: className } = Astro.props;
 
 const { pathname } = Astro.url;
-
-console.log('pathname', pathname)
 ---
 
 <li class:list={["flex gap-2 items-center group", className]}>
@@ -33,5 +31,4 @@ console.log('pathname', pathname)
     ]}
   >
   </div>
-    path {pathname} {href}
 </li>
